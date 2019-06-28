@@ -1,0 +1,22 @@
+{
+  "name": "itc230",
+  "version": "1.0.0",
+  "description": "itc230 Advanced JavaScript",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \\\"Error: no test specified\\\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/TheBaldWonder/itc230.git"
+  },
+  "author": "Jonathan Heilman",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/TheBaldWonder/itc230/issues"
+  },
+  "homepage": "https://github.com/TheBaldWonder/itc230#readme",
+  "dependencies": {
+    "express": "^4.17.1"
+  }
+}
