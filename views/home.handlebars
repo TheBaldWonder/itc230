@@ -1,0 +1,30 @@
+<html>
+<body>
+    <h1>Welcome to {{{siteName}}}</h1>
+
+    <form action="/search" method="post">
+        Search by title: 
+        <br>
+        <input type="text" name="title">
+        <input type="submit" value="Search">
+        <br>
+    </form>
+    <form action="/remove" method="post">
+        Remove by title: 
+        <br>
+        <input type="text" name="title">
+        <input type="submit" value="Delete">
+        <br>
+    </form>
+    <form action="/add" method="post">
+        Add by title, author and pubdate:
+        <br>
+        <input type="text" name="title" value="title">
+        <br>
+        <input type="text" name="author" value="author">
+        <br>
+        <input type="number" name="pubdate" value="pubdate">
+        <input type="submit" value="Add">
+    </form>
+</body>
+</html>
