@@ -4,7 +4,8 @@
   "description": "itc230 Advanced JavaScript",
   "main": "index.js",
   "scripts": {
-    "test": "echo \\\"Error: no test specified\\\" && exit 1"
+    "eslint": "eslint *.js",
+    "test": "mocha"
   },
   "repository": {
     "type": "git",
@@ -18,7 +19,12 @@
   "homepage": "https://github.com/TheBaldWonder/itc230#readme",
   "dependencies": {
     "body-parser": "^1.19.0",
+    "eslint": "^6.0.1",
     "express": "^4.17.1",
     "express-handlebars": "^3.1.0"
+  },
+  "devDependencies": {
+    "chai": "^4.2.0",
+    "mocha": "^6.1.4"
   }
 }
