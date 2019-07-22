@@ -1,9 +1,6 @@
 'use strict'
 
-var       http = require('http'),        
-            fs = require('fs'),
-            qs = require('querystring'),
-         books = require('./lib/books');
+var     books = require('./lib/books');
 
 const express = require("express");
 const app = express();
@@ -16,10 +13,23 @@ let handlebars = require("express-handlebars");
 app.engine('.handlebars', handlebars({extname: '.handlebars'}));
 app.set("view engine", ".handlebars");
 
+//var mongoose = require('mongoose');
+//mongoose.connect('mongodb://localhost/test');
+
+var Book = require("./models/Book.js");
+
+new Book({title: "Fake123", author: "John Fake", pubdate: 1999}).save(); 
+
+// return all records
+Book.find({}, function (err, items) {
+  if (err) return next(err);
+  console.log(items.length);
+  // other code here
+});
 
 // send content of 'home' view
 app.get('/', function(req,res){
-    res.render('home', {siteName: "The Book Database", titles: ["dune", "it", "moby dick", "othello", "hamlet"]});
+    res.render('home', {siteName: "The Book Database", titles: ["The Great Gatsby", "Ulysses", "Moby Dick", "War and Peace", "Great Expectations"]});
 });
 
 app.get('/all', function(req,res){
